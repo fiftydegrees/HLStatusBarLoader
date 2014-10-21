@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6721A63519F5E342009CDACC /* HLStatusBarLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6721A63419F5E342009CDACC /* HLStatusBarLoader.swift */; };
 		6778D55419F5DABD0051F671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778D55319F5DABD0051F671 /* AppDelegate.swift */; };
 		6778D55919F5DABD0051F671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6778D55719F5DABD0051F671 /* Main.storyboard */; };
 		6778D55B19F5DABD0051F671 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6778D55A19F5DABD0051F671 /* Images.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6721A63419F5E342009CDACC /* HLStatusBarLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLStatusBarLoader.swift; sourceTree = "<group>"; };
 		6778D54E19F5DABD0051F671 /* HLStatusBarLoaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLStatusBarLoaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6778D55219F5DABD0051F671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6778D55319F5DABD0051F671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				6778D55319F5DABD0051F671 /* AppDelegate.swift */,
 				6778D55719F5DABD0051F671 /* Main.storyboard */,
+				6721A63419F5E342009CDACC /* HLStatusBarLoader.swift */,
 				6778D57319F5DB240051F671 /* SampleViewController.swift */,
 				6778D55A19F5DABD0051F671 /* Images.xcassets */,
 				6778D55C19F5DABD0051F671 /* LaunchScreen.xib */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6778D57419F5DB240051F671 /* SampleViewController.swift in Sources */,
+				6721A63519F5E342009CDACC /* HLStatusBarLoader.swift in Sources */,
 				6778D55419F5DABD0051F671 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +293,7 @@
 				6778D56F19F5DABD0051F671 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

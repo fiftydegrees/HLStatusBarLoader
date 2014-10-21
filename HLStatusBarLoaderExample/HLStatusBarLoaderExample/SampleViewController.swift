@@ -12,11 +12,29 @@ class SampleViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     
+    var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 70.0
+        self.tableView.estimatedRowHeight = 70.0
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refreshControlTriggered:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl)
+    }
+    
+    func refreshControlTriggered(sender: AnyObject) {
+        
+        self.startLoading()
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(4.5 * Double(NSEC_PER_SEC))),
+            dispatch_get_main_queue()) { () -> Void in
+            
+                self.refreshControl.endRefreshing()
+                self.stopLoading()
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
