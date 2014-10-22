@@ -14,14 +14,26 @@ private var xoBackgroundColorAssociationKey: UInt8 = 1
 
 private var xoTimerAssociationKeyy: NSTimer        = NSTimer()
 
-private let _LoaderHUDSharedInstance = LoaderHUD(frame: CGRectMake(0.0, -20.0,
-                                                                   CGRectGetWidth(UIScreen.mainScreen().bounds), 2.0))
+private let _LoaderHUDSharedInstance = LoaderHUD(frame: CGRectMake(0.0, -20.0, CGRectGetWidth(UIScreen.mainScreen().bounds), 2.0))
 
 class LoaderHUD: UIView {
     
     var factoryTimer: NSTimer?
     
     var foregroundColor: UIColor?
+    
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        
+        orientationDidChange(nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationDidChange:", name: UIDeviceOrientationDidChangeNotification, object: nil)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     class var sharedInstance: LoaderHUD {
         return _LoaderHUDSharedInstance
@@ -30,7 +42,7 @@ class LoaderHUD: UIView {
     func startLoadingAnimation(animated: Bool) -> Void {
         
         stopLoadingAnimation(false)
-        
+            
         UIView.animateWithDuration((animated ? 0.2 : 0.0), animations: { () -> Void in
             LoaderHUD.sharedInstance.alpha = 1.0
         })
@@ -65,6 +77,18 @@ class LoaderHUD: UIView {
         animation.timingFunction        = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         
         loadingView.layer.addAnimation(animation, forKey: "basic")
+    }
+    
+    func orientationDidChange(notification: NSNotification?) {
+        
+        var currentOrientation: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+        
+        if UIInterfaceOrientationIsPortrait(currentOrientation) {
+            self.frame = CGRectMake(0.0, -20.0, CGRectGetWidth(UIScreen.mainScreen().bounds), 2.0)
+        }
+        else if UIInterfaceOrientationIsLandscape(currentOrientation) {
+            self.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(UIScreen.mainScreen().bounds), 2.0)
+        }
     }
 }
 
