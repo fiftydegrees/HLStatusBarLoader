@@ -48,7 +48,7 @@ class LoaderHUD: UIView {
         })
         
         addSwipingView()
-        factoryTimer = NSTimer.scheduledTimerWithTimeInterval(0.7, target: self, selector: "addSwipingView", userInfo: nil, repeats: true)
+        factoryTimer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "addSwipingView", userInfo: nil, repeats: true)
     }
     
     func stopLoadingAnimation(animated: Bool) -> Void {
@@ -64,13 +64,13 @@ class LoaderHUD: UIView {
     func addSwipingView() {
         
         var loadingView: UIView         = UIView(frame: CGRectMake(CGRectGetWidth(LoaderHUD.sharedInstance.bounds), 0.0,
-                                                           CGRectGetWidth(LoaderHUD.sharedInstance.bounds) / 4.0, CGRectGetHeight(LoaderHUD.sharedInstance.bounds)))
+                                                                   50.0, CGRectGetHeight(LoaderHUD.sharedInstance.bounds)))
         loadingView.backgroundColor     = (foregroundColor != nil ? foregroundColor : UIColor.blackColor())
         
         LoaderHUD.sharedInstance.addSubview(loadingView)
 
         var animation: CABasicAnimation = CABasicAnimation()
-        animation.duration              = 2.0
+        animation.duration              = 2.5
         animation.keyPath               = "position.x";
         animation.fromValue             = CGRectGetWidth(LoaderHUD.sharedInstance.bounds) + CGRectGetWidth(loadingView.frame)
         animation.toValue               = -CGRectGetWidth(LoaderHUD.sharedInstance.bounds)
@@ -81,14 +81,31 @@ class LoaderHUD: UIView {
     
     func orientationDidChange(notification: NSNotification?) {
         
-        var currentOrientation: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+        factoryTimer?.invalidate()
+        factoryTimer = nil
         
-        if UIInterfaceOrientationIsPortrait(currentOrientation) {
-            self.frame = CGRectMake(0.0, -20.0, CGRectGetWidth(UIScreen.mainScreen().bounds), 2.0)
+        UIView.animateWithDuration(0.2,
+            animations: { () -> Void in
+                
+                self.alpha = 0.0
+        }) { (finished) -> Void in
+            
+            for view in self.subviews {
+                view.removeFromSuperview()
+            }
+            
+            var currentOrientation: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+            
+            if UIInterfaceOrientationIsPortrait(currentOrientation) {
+                self.frame = CGRectMake(0.0, -20.0, CGRectGetWidth(UIScreen.mainScreen().bounds), 2.0)
+            }
+            else if UIInterfaceOrientationIsLandscape(currentOrientation) {
+                self.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(UIScreen.mainScreen().bounds), 2.0)
+            }
+            
+            self.startLoadingAnimation(true)
         }
-        else if UIInterfaceOrientationIsLandscape(currentOrientation) {
-            self.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(UIScreen.mainScreen().bounds), 2.0)
-        }
+        
     }
 }
 
