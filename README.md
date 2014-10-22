@@ -2,7 +2,7 @@
 
 Simple non-blocking HUD displaying a loader above the status bar with a cool animation. Single-line to use.
 
-![HLStatusBarLoader sample](https://raw.githubusercontent.com/fiftydegrees/HLStatusBarLoader/develop/README-Files/hlstatusbarloader-sample.gif)
+![HLStatusBarLoader sample](https://raw.githubusercontent.com/fiftydegrees/HLStatusBarLoader/master/README-Files/hlstatusbarloader-sample.gif)
 
 ## Installation
 
