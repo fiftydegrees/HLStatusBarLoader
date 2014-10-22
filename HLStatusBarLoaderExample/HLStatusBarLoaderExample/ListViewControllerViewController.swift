@@ -75,7 +75,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("newsCell") as UITableViewCell
         
-        cell.textLabel.text = "Hello, world!"
+        cell.textLabel?.text = "Hello, world!"
         cell.detailTextLabel?.text = "This is a sample status"
         
         return cell
