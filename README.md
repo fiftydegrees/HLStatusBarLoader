@@ -8,7 +8,7 @@ Simple non-blocking HUD displaying a loader above the status bar with a cool ani
 
 ### From CocoaPods
 
-Add `'HLStatusBarLoader', :head` to pull from the master branch the latest stable revision.
+Add `pod 'HLStatusBarLoader'` to pull from the master branch the latest stable revision.
 
 ### Manually
 
