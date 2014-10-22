@@ -18,11 +18,11 @@ class SampleViewController: UIViewController, UITableViewDataSource, UITableView
         
         super.viewDidLoad()
         
-        self.tableView.estimatedRowHeight = 70.0
-        
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: "refreshControlTriggered:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
+        
+        self.loaderForegroundColor = UIColor(red: 205.0/255.0, green: 200.0/255.0, blue: 41.0/255.0, alpha: 0.85)
     }
     
     func refreshControlTriggered(sender: AnyObject) {
@@ -58,7 +58,7 @@ class SampleViewController: UIViewController, UITableViewDataSource, UITableView
         
         var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("newsCell") as UITableViewCell
         
-        cell.textLabel?.text = "Hello, world!"
+        cell.textLabel.text = "Hello, world!"
         cell.detailTextLabel?.text = "This is a sample status"
         
         return cell
