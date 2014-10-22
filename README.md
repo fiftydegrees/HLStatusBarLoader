@@ -12,28 +12,28 @@ Simple non-blocking HUD displaying a loader above the status bar with a cool ani
 
 ## Usage
 
+This is an UIViewController extension. You just have to call these methods on your UIViewController instance. As it does concern a UI update, remmeber to dispach  on the main thread.
+
 **Display the loader:**
 
 ```
-func startLoading() -> Void
+func showStatusBarHUD() -> Void
 ```
 
 **Hide the loader:**
 
 ```
-func stopLoading() -> Void
+func hideStatusBarHUD() -> Void
 ```
-
-Call these methods on the *main thread*. You can easily dispatch using GCD.
 
 ## Settings
 
-**Change tint color:**
+**Changing tint color:**
 
 Update this property in your UIViewController instance.
 
 ```
-var loaderForegroundColor: UIColor?
+var statusBarHUDForegroundColor: UIColor?
 ```
 Default color is `UIColor.black()`.
 

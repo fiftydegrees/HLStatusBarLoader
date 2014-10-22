@@ -12,6 +12,19 @@ class DetailViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         
-        self.loaderForegroundColor = UIColor.blueColor()
+        super.viewWillAppear(animated)
+        
+        self.navigationItem.title = "Detailed view"
+        
+        self.statusBarHUDForegroundColor = UIColor.whiteColor()
+        
+        self.showStatusBarHUD()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        self.hideStatusBarHUD()
     }
 }

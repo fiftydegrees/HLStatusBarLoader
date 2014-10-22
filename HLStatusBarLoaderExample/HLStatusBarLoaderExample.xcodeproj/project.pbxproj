@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C9DF30119F8023F00B327ED /* ListViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DF30019F8023F00B327ED /* ListViewControllerViewController.swift */; };
 		3CF8A27019F73C190036D619 /* HLStatusBarLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8A26F19F73C190036D619 /* HLStatusBarLoader.swift */; };
 		6765A06519F7D85200C022D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6765A06419F7D85200C022D2 /* DetailViewController.swift */; };
 		6778D55419F5DABD0051F671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778D55319F5DABD0051F671 /* AppDelegate.swift */; };
 		6778D55919F5DABD0051F671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6778D55719F5DABD0051F671 /* Main.storyboard */; };
 		6778D55B19F5DABD0051F671 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6778D55A19F5DABD0051F671 /* Images.xcassets */; };
 		6778D55E19F5DABD0051F671 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6778D55C19F5DABD0051F671 /* LaunchScreen.xib */; };
-		6778D57419F5DB240051F671 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778D57319F5DB240051F671 /* SampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C9DF30019F8023F00B327ED /* ListViewControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewControllerViewController.swift; sourceTree = "<group>"; };
 		3CF8A26F19F73C190036D619 /* HLStatusBarLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLStatusBarLoader.swift; sourceTree = "<group>"; };
 		6765A06419F7D85200C022D2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6778D54E19F5DABD0051F671 /* HLStatusBarLoaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLStatusBarLoaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,7 +26,6 @@
 		6778D55819F5DABD0051F671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6778D55A19F5DABD0051F671 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6778D55D19F5DABD0051F671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6778D57319F5DB240051F671 /* SampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 				6778D55319F5DABD0051F671 /* AppDelegate.swift */,
 				3CF8A26E19F73C190036D619 /* HLStatusBarLoader */,
 				6778D55719F5DABD0051F671 /* Main.storyboard */,
-				6778D57319F5DB240051F671 /* SampleViewController.swift */,
+				3C9DF30019F8023F00B327ED /* ListViewControllerViewController.swift */,
 				6765A06419F7D85200C022D2 /* DetailViewController.swift */,
 				6778D55A19F5DABD0051F671 /* Images.xcassets */,
 				6778D55C19F5DABD0051F671 /* LaunchScreen.xib */,
@@ -157,10 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6778D57419F5DB240051F671 /* SampleViewController.swift in Sources */,
 				3CF8A27019F73C190036D619 /* HLStatusBarLoader.swift in Sources */,
 				6778D55419F5DABD0051F671 /* AppDelegate.swift in Sources */,
 				6765A06519F7D85200C022D2 /* DetailViewController.swift in Sources */,
+				3C9DF30119F8023F00B327ED /* ListViewControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
