@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="te2-te-tIX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="te2-te-tIX">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Sample View Controller-->
@@ -21,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="newsCell" textLabel="7f0-q2-Pxe" detailTextLabel="uIR-1A-0x2" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="oK8-sZ-g7X">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newsCell" textLabel="7f0-q2-Pxe" detailTextLabel="uIR-1A-0x2" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="oK8-sZ-g7X">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oK8-sZ-g7X" id="R97-E4-Gbo">
@@ -41,6 +40,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="IPK-0T-NSk" kind="push" id="b7G-pZ-MjR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -66,6 +68,25 @@
             </objects>
             <point key="canvasLocation" x="951" y="477"/>
         </scene>
+        <!--Detail-->
+        <scene sceneID="zku-2s-VZY">
+            <objects>
+                <viewController id="IPK-0T-NSk" customClass="DetailViewController" customModule="HLStatusBarLoaderExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GyP-wZ-Sbh"/>
+                        <viewControllerLayoutGuide type="bottom" id="YIc-pC-8Kd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AiP-2u-gQx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="2Nz-az-VFQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43q-rK-KEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656" y="477"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aaz-xi-7RP">
             <objects>
@@ -74,6 +95,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="aZM-qB-lkE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.80392156862745101" green="0.26666666666666666" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
